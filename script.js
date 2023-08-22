@@ -5,13 +5,11 @@ const en = "Mondey, Tuesday, Wendnesday, Thudsday, Friday, Saturday, Sunday";
 let lang = ru;
 let namePerson = 'Александр'; 
 
-
 if (lang == ru) {
     console.log(ru);
 } else {
     console.log(en);
 }
-
 
 switch (lang) {
     case ru:
@@ -24,9 +22,7 @@ switch (lang) {
         console.log("Что-то пошло не так");
 }
 
-
 lang === ru ? console.log(ru) : console.log(en);
-
 
 namePerson == 'Артем' ? console.log("директор") : console.log("студент"); 
 namePerson == 'Александр' ? console.log("преподаватель") : console.log("студент"); 
