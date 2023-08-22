@@ -1,32 +1,25 @@
 'use strict';
 
-const ru = "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье";
-const en = "Mondey, Tuesday, Wendnesday, Thudsday, Friday, Saturday, Sunday";
-let lang = ru;
-let namePerson = 'Александр'; 
+const str = prompt('Введите текст');
+const newStr = str.trim();
+ 
+const changeStr = function() {
+    const checkString = function() {
+        if (typeof newStr != 'string') {
+            return 'str - не строка';
+         } else {
+            return 'str - строка';
+        }
+    }; 
 
+    const deleteElement = function() {
+        if (newStr.length > 30) {
+            return newStr.slice(0, newStr.length - 31).concat('(...)');
+        }
+    };  
 
-if (lang == ru) {
-    console.log(ru);
-} else {
-    console.log(en);
-}
+    console.log(checkString());
+    console.log(deleteElement());
+};  
 
-
-switch (lang) {
-    case ru:
-        console.log("Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье");
-        break;
-    case en:
-        console.log("Mondey, Tuesday, Wendnesday, Thudsday, Friday, Saturday, Sunday");
-        break;
-    default:
-        console.log("Что-то пошло не так");
-}
-
-
-lang === ru ? console.log(ru) : console.log(en);
-
-
-namePerson == 'Артем' ? console.log("директор") : console.log("студент"); 
-namePerson == 'Александр' ? console.log("преподаватель") : console.log("студент"); 
+changeStr(newStr);
