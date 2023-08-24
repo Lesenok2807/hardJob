@@ -10,11 +10,11 @@ console.log(newArr);
 let num = 100;
  
 nextPrime:
-for (let i = 2; i <= num; i++) { // Для всех i...
+for (let i = 2; i <= num; i++) { 
  
-  for (let j = 2; j < i; j++) { // проверить, делится ли число..
-    if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  for (let j = 2; j < i; j++) {
+    if (i % j == 0) continue nextPrime; 
   }
  
-  console.log("Делители этого числа: 1 и " ,i); // простое число
+  console.log("Делители этого числа: 1 и ", i);
 }
