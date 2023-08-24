@@ -1,28 +1,20 @@
 'use strict';
 
-const ru = "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье";
-const en = "Mondey, Tuesday, Wendnesday, Thudsday, Friday, Saturday, Sunday";
-let lang = ru;
-let namePerson = 'Александр'; 
+const arr = ['42365', '72525', '321', '55555', '25441', '3212', '24587'];
 
-if (lang == ru) {
-    console.log(ru);
-} else {
-    console.log(en);
+let newArr = arr.filter((item) => item[0] == 4 || item[0] == 2);
+
+console.log(newArr);
+
+
+let num = 100;
+ 
+nextPrime:
+for (let i = 2; i <= num; i++) { // Для всех i...
+ 
+  for (let j = 2; j < i; j++) { // проверить, делится ли число..
+    if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  }
+ 
+  console.log("Делители этого числа: 1 и " ,i); // простое число
 }
-
-switch (lang) {
-    case ru:
-        console.log("Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье");
-        break;
-    case en:
-        console.log("Mondey, Tuesday, Wendnesday, Thudsday, Friday, Saturday, Sunday");
-        break;
-    default:
-        console.log("Что-то пошло не так");
-}
-
-lang === ru ? console.log(ru) : console.log(en);
-
-namePerson == 'Артем' ? console.log("директор") : console.log("студент"); 
-namePerson == 'Александр' ? console.log("преподаватель") : console.log("студент"); 
