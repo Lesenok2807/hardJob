@@ -1,20 +1,19 @@
 'use strict';
 
-const arr = ['42365', '72525', '321', '55555', '25441', '3212', '24587'];
 
-let newArr = arr.filter((item) => item[0] == 4 || item[0] == 2);
+const week = ['Воскресенье', 'Понедельник', 'Вторик', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 
-console.log(newArr);
+let data = new Date();
+let toDay = week[data.getDay()];
 
+for (let i = 0; i < 7; i++) {
+  week.push();
 
-let num = 100;
- 
-nextPrime:
-for (let i = 2; i <= num; i++) { // Для всех i...
- 
-  for (let j = 2; j < i; j++) { // проверить, делится ли число..
-    if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  if (week[i] === 'Суббота' || week[i] === 'Воскресенье') {
+    document.write(`<p><i>${week[i]}</i></p>`);
+  } else if (week[i] === toDay) {
+    document.write(`<p><b>${week[i]}</b></p>`);
+  } else {
+    document.write(`<p>${week[i]}</p>`);
   }
- 
-  console.log("Делители этого числа: 1 и " ,i); // простое число
 }
